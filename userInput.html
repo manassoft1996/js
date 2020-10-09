@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user input</title>
+</head>
+
+<body>
+    <script>
+        var ele = prompt("enter no of elements:= ");
+        var arr = [];
+
+        for (var i = 1; i <= ele; i++) {
+            arr[i] = prompt("enter name: ");
+        }
+        //display values
+        for (var i = 1; i <= ele; i++) {
+            document.write(arr[i] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

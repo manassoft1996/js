@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse of string</title>
+</head>
+
+<body>
+    <h1>reverse of a string</h1>
+    <input type="text" name="" id="rev1" onkeyup="reverseString()">
+    <input type="text" name="" id="showData">
+
+
+    <script>
+        function reverseString() {
+            var str = document.getElementById("rev1").value;
+            //alert(str);
+            var newString = " ";
+            for (var i = str.length - 1; i >= 0; i--) {
+                newString = newString + str[i];
+            }
+            document.getElementById("showData").value = newString;
+        }
+    </script>
+</body>
+
+</html>

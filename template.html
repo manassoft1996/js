@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <style>
+        .myClass {
+            color: #ffffff;
+            background-color: DodgerBlue;
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+    <button onclick="showContent()">Show hidden content</button>
+
+    <template>
+        <div class="myClass">I like: </div>
+    </template>
+
+    <script>
+        var myArr = ["Audi", "BMW", "Ford", "Honda", "Jaguar", "Nissan"];
+
+        function showContent() {
+            var temp, item, a, i;
+            temp = document.getElementsByTagName("template")[0];
+            item = temp.content.querySelector("div");
+            for (i = 0; i < myArr.length; i++) {
+                a = document.importNode(item, true);
+                a.textContent += myArr[i];
+                document.body.appendChild(a);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
